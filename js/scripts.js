@@ -75,14 +75,7 @@ const sendMail = async () => {
     })
 
     const data = await response.json();
+    alert(data.message)
 
-    if (!response.ok) {
-
-      setError(data.message)
-
-    }
-    else if (response.ok) {
-      alert(data.message)
-     
-    }
+   
 }
