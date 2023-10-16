@@ -65,6 +65,7 @@ const sendMail = async () => {
     let c_message = document.getElementById("message").value;
 
     const contact = { c_name, c_email, c_phone, c_message};
+    console.log(contact)
     const response = await fetch('https://bookccentric-backend.onrender.com/books/contactdevbasito', {
       method: 'POST',
       body: JSON.stringify(contact),
