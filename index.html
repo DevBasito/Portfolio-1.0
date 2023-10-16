@@ -260,7 +260,7 @@
                         <!-- To make this form functional, sign up at-->
                         <!-- https://startbootstrap.com/solution/contact-forms-->
                         <!-- to get an API token!-->
-                        <form id="contactForm" data-sb-form-api-token="90f78223-f4ec-4a45-bba4-a66a3f2cfe27">
+                        <form id="contactForm" data-sb-form-api-token="90f78223-f4ec-4a45-bba4-a66a3f2cfe27" action="POST">
                             
                             <!-- Name input-->
                             <div class="form-floating mb-3">
@@ -321,7 +321,7 @@
                             </div>
                             <!-- Submit Button-->
                             <div class="d-grid"><button class="btn btn-xl " style="background-color: #48BB78;" id="submitButton"
-                                    type="submit">Submit</button></div>
+                                    type="submit" onclick="sendMail()">Submit</button></div>
                         </form>
                     </div>
                 </div>

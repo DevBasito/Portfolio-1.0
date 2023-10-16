@@ -57,3 +57,32 @@ window.addEventListener('DOMContentLoaded', event => {
     // });
 
 });
+
+const sendMail = async () => {
+    let c_name = document.getElementById("name").value;
+    let c_email = document.getElementById("email").value;
+    let c_phone = document.getElementById("phone").value;
+    let c_message = document.getElementById("message").value;
+
+    const contact = { c_name, c_email, c_phone, c_message};
+    const response = await fetch(`${VITE_API_URI}/books/contactdevbasito`, {
+      method: 'POST',
+      body: JSON.stringify(contact),
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': user.token
+      }
+    })
+
+    const data = await response.json();
+
+    if (!response.ok) {
+
+      setError(data.message)
+
+    }
+    else if (response.ok) {
+      setMessage(data.message)
+      clearState();
+    }
+}
