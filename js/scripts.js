@@ -65,12 +65,12 @@ const sendMail = async () => {
     let c_message = document.getElementById("message").value;
 
     const contact = { c_name, c_email, c_phone, c_message};
-    const response = await fetch(`${VITE_API_URI}/books/contactdevbasito`, {
+    const response = await fetch('https://bookccentric-backend.onrender.com/books/contactdevbasito', {
       method: 'POST',
       body: JSON.stringify(contact),
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': user.token
+        
       }
     })
 
